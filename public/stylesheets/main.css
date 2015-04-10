@@ -1,0 +1,19 @@
+.navbar-inverse .navbar-nav >li>a:hover
+{
+    background-color: #269abc;
+    color: #ffff00;
+}
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:hover
+{
+    background-color: #269abc;
+    color: #ffff00;
+}
+.navbar-nav>li>a
+{
+    border-radius: 15px;
+}
+.body
+{
+    background-color: #46b8da;
+}

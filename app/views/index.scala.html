@@ -1,0 +1,53 @@
+@()
+
+@main("Home") {
+    @navbar("home")
+        <body style="background-color: #d9edf7">
+            <h1 class="text-center"><strong>Welcome To Our Web Services Center!</strong></h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-4">
+                    @registration("registration")
+                    </div>
+                    <div class="col-xs-4">
+                        <img class="img-responsive center-block" style="width: 200px;height: 200px" src="@routes.Assets.at("images/111.png")">
+                    </div>
+                    <div class="col-xs-4">
+                    @carousel("carousel")
+                    </div>
+                </div>
+                <h1 class="text-center"><b>You can choose any service or shop that you need!</b></h1>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <a href="#"><img style="height: 200px" class="img-responsive img-thumbnail" src="@routes.Assets.at("images/shops.and.serv/shop.and.serv.jpg")"></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><img style="height: 200px" class="img-responsive img-thumbnail" src="@routes.Assets.at("images/shops.and.serv/shop.and.serv1.jpg")"></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><img style="height: 200px" class="img-responsive img-thumbnail" src="@routes.Assets.at("images/shops.and.serv/shop.and.serv2.jpg")"></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"> <img style="height: 200px" class="img-responsive img-thumbnail" src="@routes.Assets.at("images/shops.and.serv/shop1.jpg")"></a>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <a href="#"> <img style="height: 200px; width: 300px" class="img-responsive img-thumbnail" src="@routes.Assets.at("images/shops.and.serv/serv1.jpg")"></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"> <img style="height: 200px" class="img-responsive img-thumbnail" src="@routes.Assets.at("images/shops.and.serv/serv2.jpg")"></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"> <img style="height: 200px" class="img-responsive img-thumbnail" src="@routes.Assets.at("images/shops.and.serv/serv3.jpg")"></a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"> <img style="height: 200px; width: 250px;" class="img-responsive img-thumbnail" src="@routes.Assets.at("images/shops.and.serv/serv4.jpg")"></a>
+                    </div>
+                </div>
+            </div>
+        </body>
+
+
+}

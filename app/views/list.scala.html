@@ -1,0 +1,29 @@
+@(compyuters: List[Compyuter])
+@main("List") {
+@navbar("list")
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Mode</th>
+                    <th>CPU</th>
+                    <th>Mark</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(compyuter <- compyuters ){
+                <tr>
+                    <td>@compyuter.mode</td>
+                    <td>@compyuter.cpu</td>
+                    <td>@compyuter.mark</td>
+                    <td>
+                        <a href="@routes.Compyuters.remove(compyuter.id.get)">
+                            <button class="btn btn-danger">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
