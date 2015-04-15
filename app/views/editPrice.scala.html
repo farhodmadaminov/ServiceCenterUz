@@ -1,0 +1,18 @@
+@(price: Price)
+
+@main("Edit") {
+
+    @navbar("addPrice")
+
+    <div class="container main-content">
+        <h2 class="text-center">Edit Price</h2>
+        <form class="@routes.Prices.update(price.id.get)" method="post">
+            <div class="form-group">
+                <label for="inp-mode">Mode</label>
+                <input type="text" class="form-control" id="inp-mode"
+                name="modern" value="@price.mode" required="">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+}

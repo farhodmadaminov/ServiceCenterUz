@@ -1,4 +1,4 @@
-@(compyuters: List[Compyuter])
+@(compyuters: List[CompyuterForDisplay])
 @main("List") {
 @navbar("list")
     <div class="container">
@@ -7,17 +7,21 @@
                 <tr>
                     <th>Mode</th>
                     <th>CPU</th>
-                    <th>Mark</th>
+                    <th>Mode</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-            @for(compyuter <- compyuters ){
+            @for(comp <- compyuters ){
                 <tr>
-                    <td>@compyuter.mode</td>
-                    <td>@compyuter.cpu</td>
-                    <td>@compyuter.mark</td>
+                    <td>@comp.compyuter.mode</td>
+                    <td>@comp.compyuter.cpu</td>
+                    <td>@comp.compyuter.mode</td>
                     <td>
-                        <a href="@routes.Compyuters.remove(compyuter.id.get)">
+                        <a href="@routes.Compyuters.showEditForm(comp.compyuter.id.get)">
+                            <button class="btn btn-danger">Edit</button>
+                        </a>
+                        <a href="@routes.Compyuters.remove(comp.compyuter.id.get)">
                             <button class="btn btn-danger">Delete</button>
                         </a>
                     </td>

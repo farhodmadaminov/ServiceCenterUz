@@ -3,13 +3,22 @@
 # ~~~~
 
 # Home page
-GET         /                  controllers.Application.index
+GET         /                       controllers.Application.index
 GET         /add                    @controllers.Compyuters.showAddForm
 POST        /add                    @controllers.Compyuters.add
 GET         /Compyuters/list        @controllers.Compyuters.list
 GET         /remove                 @controllers.Compyuters.remove(id: Int)
+POST         /compyuter/:id/price   @controllers.Compyuters.update(id: Int)
+GET         /compyuter/:id/price    @controllers.Compyuters.showEditForm(id: Int)
+
+GET         /compyuters/list         @controllers.Prices.list
+GET         /compyuters/new          @controllers.Prices.showAddForm
+POST        /compyuters/new          @controllers.Prices.add
+GET         /Price/:id/remove        @controllers.Prices.remove(id: Int)
+POST        /country/:id/edit        @controllers.Prices.update(id: Int)
+GET         /country/:id/edit        @controllers.Prices.showEditForm(id: Int)
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file        controllers.Assets.at(path="/public", file)
+GET         /assets/*file           controllers.Assets.at(path="/public", file)
 
     

@@ -1,0 +1,32 @@
+@(compyuter: Compyuter, prices: List[Price])
+
+@main("Edit") {
+
+    @navbar("add")
+
+    <div class="container main-content">
+        <h2 class="text-center">Edit Price</h2>
+        <form class="@routes.Compyuters.update(compyuter.id.get)" method="post">
+            <div class="form-group">
+                <label for="inp-mode">Mode</label>
+                <input type="text" class="form-control" id="inp-mode"
+                name="mode" value="@compyuter.mode" required="">
+            </div>
+            <div class="form-group">
+                <label for="inp-cpu">CPU</label>
+                <textarea type="text" class="form-control" id="inp-cpu"
+                name="cpu" required="">@compyuter.cpu</textarea>
+            </div>
+            <div class="form-group">
+                <label for="inp-modern">MODE</label>
+                <select name="modern" class="form-control" id="inp-modern">
+                @for(price <- prices) {
+                    <option value="@price.id">@price.mode</option>
+                }
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+}

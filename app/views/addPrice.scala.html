@@ -1,0 +1,19 @@
+@()
+
+@main("Add") {
+
+    @navbar("addPrice")
+
+    <div class="container main-content">
+        <h2 class="text-center">Add new Country</h2>
+        <form class="@routes.Prices.add()" method="post">
+            <div class="form-group">
+                <label for="inp-mode">Mode</label>
+                <input type="text" class="form-control" id="inp-mode"
+                name="mode" required="">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+}

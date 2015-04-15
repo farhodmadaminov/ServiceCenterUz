@@ -1,0 +1,34 @@
+@(prices: List[Price])
+
+@main("Home") {
+
+    @navbar("listPrice")
+
+    <div class="container main-content">
+
+        <h1 class="text-center"></h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Mode</th>
+                </tr>
+            </thead>
+            <tbody>
+            @for(price <- prices) {
+                <tr>
+                    <td>@price.mode</td>
+                    <td>
+                        <a href="@routes.Prices.showEditForm(price.id.get)">
+                            <button class="btn btn-warning">Edit</button>
+                        </a>
+                        <a href="@routes.Prices.remove(price.id.get)">
+                            <button class="btn btn-danger">Delete</button>
+                        </a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+
+}
